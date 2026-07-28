@@ -1,0 +1,44 @@
+name: {{app_name.snakeCase()}}
+description: "A new Flutter project initialized with custom starter architecture."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Logging
+  loggy: ^2.0.3
+  flutter_loggy: ^2.0.3+1
+
+  # State Management & Routing
+  go_router: ^17.0.1
+  hooks_riverpod: ^3.0.3
+  riverpod_annotation: ^3.0.3
+
+  # Code Generation Annotations
+  freezed_annotation: ^3.1.0
+  json_annotation: ^4.9.0
+
+  # Utilities & Networking
+  cupertino_icons: ^1.0.8
+  http: ^1.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  freezed: ^3.2.3
+
+  # Code Generators
+  build_runner: ^2.10.4
+  json_serializable: ^6.11.2
+  riverpod_generator: ^3.0.3
+
+flutter:
+  uses-material-design: true

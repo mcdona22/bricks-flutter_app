@@ -1,0 +1,14 @@
+name: flutter_app
+description: Hybrid Flutter starter combining flutter create with custom pubspec and architecture
+version: 0.1.0
+
+vars:
+  app_name:
+    type: string
+    description: App name in snake_case (e.g. my_cool_app)
+    prompt: What is your app name?
+  org:
+    type: string
+    default: com.mcdona22
+    description: Organization identifier (e.g. com.mydomain)
+    prompt: What is your org domain?
