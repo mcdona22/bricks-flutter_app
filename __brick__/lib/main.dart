@@ -3,7 +3,11 @@ import 'package:flutter_loggy/flutter_loggy.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:loggy/loggy.dart';
 
-import 'features/home/home_page.dart';
+import 'package:{{app_name.snakeCase()}}/features/home/home_page.dart';
+import 'package:{{app_name.snakeCase()}}/core/routing/router.dart';
+import 'package:{{app_name.snakeCase()}}/core/theme/themes.dart';
+
+import 'core/theme/themes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,14 +29,13 @@ class App extends HookConsumerWidget with UiLoggy {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: '{{app_name.titleCase()}}',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const HomePage(),
+      routerConfig: routerConfig,
+      theme: ThemeData.from(colorScheme: lightColorScheme),
+      darkTheme: ThemeData.from(colorScheme: darkColorScheme),
+      themeMode: ThemeMode.dark,
     );
   }
 }
