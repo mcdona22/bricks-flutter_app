@@ -3,11 +3,8 @@ import 'package:flutter_loggy/flutter_loggy.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:loggy/loggy.dart';
 
-import 'package:{{app_name.snakeCase()}}/features/home/home_page.dart';
 import 'package:{{app_name.snakeCase()}}/core/routing/router.dart';
 import 'package:{{app_name.snakeCase()}}/core/theme/themes.dart';
-
-import 'core/theme/themes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
